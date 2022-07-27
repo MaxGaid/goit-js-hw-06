@@ -13,7 +13,17 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector(`.gallery`);
+const imagesEl = images
+  .map((image) => {
+    const imgEl = `<li><img class="gallery-list" width="270" src="${image.url}" alt="${image.alt}"/></li>`;
+    return imgEl;
+  })
+  .join(" ");
+
+const groupEl = document.querySelector(".gallery");
+groupEl.insertAdjacentHTML("afterbegin", imagesEl);
+
+/* const galleryEl = document.querySelector(`.gallery`);
 console.log(galleryEl);
 
 const makeLiImg = ({ url, alt }) => {
@@ -31,3 +41,4 @@ const makeLiImg = ({ url, alt }) => {
 const elements = images.map(makeLiImg);
 
 galleryEl.append(...elements);
+ */
