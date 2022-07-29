@@ -17,11 +17,3 @@ function handleBtnClickMinus() {
 decrementEl.addEventListener("click", handleBtnClickMinus);
 
 incrementEl.addEventListener("click", handleBtnClickPlus);
-
-// incrementEl.addEventListener('click', () => {
-//     const actionEl = this.dataset.action;
-//     const valueEl = document.querySelector('#value');
-//     const currentValue = 0;
-//     let counterValue = currentValue - 1;
-//     return counterValue = valueEl.value;
-// })
